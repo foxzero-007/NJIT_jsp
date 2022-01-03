@@ -1,0 +1,9 @@
+.button-blue{
+    width: 40%;
+    height: 80%;
+    font-size: 1vw;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 7%;
+}
