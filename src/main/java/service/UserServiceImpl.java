@@ -20,7 +20,7 @@ public class UserServiceImpl implements IUserService{
 
     @Override
     public User getUserByName(String name) {
-        return null;
+        return UserDao.getUserByName(name);
     }
 
     @Override

@@ -24,7 +24,7 @@ public class UserDaoImpl implements IUserDao{
     @Override
     public User getUserById(int id) {
         try{
-            return runner.query("select * from test where id=?",new BeanHandler<User>(User.class),id);
+            return runner.query("select * from user_manage where id=?",new BeanHandler<User>(User.class),id);
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -32,7 +32,11 @@ public class UserDaoImpl implements IUserDao{
 
     @Override
     public User getUserByName(String name) {
-        return null;
+        try{
+            return runner.query("select * from user_manage where name=?",new BeanHandler<User>(User.class),name);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
